@@ -1,0 +1,64 @@
+# version: "3.8"
+
+# services:
+#   app:
+#     build: .
+#     volumes:
+#       - .:/app
+#     ports:
+#       - "8000:8000"
+#     depends_on:
+#       - db
+#     environment:
+#       - DATABASE_URL=postgresql://user:password@db/dbname
+#       - SECRET_KEY=your_secret_key
+#       - JWT_ALGORITHM=HS256
+#       - JWT_EXPIRATION_TIME=3600
+
+#   db:
+#     image: postgres:13
+#     environment:
+#       POSTGRES_USER: user
+#       POSTGRES_PASSWORD: password
+#       POSTGRES_DB: dbname
+#     ports:
+#       - "5432:5432"
+
+#   # Uncomment below if you want a background task scheduler like Celery
+#   # celery:
+#   #   image: celery
+#   #   command: celery -A app.celery worker --loglevel=info
+
+
+
+version: "3.8"
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./app:/app  # Maps the local app directory to the container's app directory for live updates during development
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://user:password@db/dbname
+      - SECRET_KEY=your_secret_key
+      - JWT_ALGORITHM=HS256
+      - JWT_EXPIRATION_TIME=3600
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: dbname
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
+    driver: local
