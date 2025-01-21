@@ -1,0 +1,33 @@
+# .gitignore
+
+# Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environment
+venv/
+
+# VSCode settings
+#.vscode/
+
+# pyenv
+.python-version
+
+# Database files
+*.db
+*.sqlite3
+
+# Alembic migrations
+alembic/versions/
+
+# Local environment variables
+.env
+
+# FastAPI generated files
+*.log
+
+# Docker
+# docker-compose.override.yml
+# Dockerfile
