@@ -1,0 +1,54 @@
+.
+├── alembic
+│   └── env.py
+├── app
+│   ├── api
+│   │   └── v1
+│   │       ├── auth.py
+│   │       ├── blog.py
+│   │       ├── chat.py
+│   │       ├── __init__.py
+│   │       ├── note.py
+│   │       └── task.py
+│   ├── core
+│   │   ├── config.py
+│   │   ├── __init__.py
+│   │   └── security.py
+│   ├── db
+│   │   ├── blog_crud.py
+│   │   ├── chat_crud.py
+│   │   ├── __init__.py
+│   │   ├── note_crud.py
+│   │   ├── session.py
+│   │   └── task_crud.py
+│   ├── main.py
+│   ├── models
+│   │   ├── blog.py
+│   │   ├── chat.py
+│   │   ├── __init__.py
+│   │   ├── note.py
+│   │   ├── task.py
+│   │   └── user.py
+│   ├── schemas
+│   │   ├── blog.py
+│   │   ├── chat.py
+│   │   ├── __init__.py
+│   │   ├── note.py
+│   │   ├── task.py
+│   │   └── user.py
+│   ├── services
+│   │   ├── blog.py
+│   │   ├── chat.py
+│   │   ├── __init__.py
+│   │   ├── note.py
+│   │   ├── task.py
+│   │   └── user.py
+│   └── static
+│       └── chat.html
+├── docker-compose.yaml
+├── Dockerfile
+├── project_structure.txt
+├── README.md
+└── requirements.txt
+
+11 directories, 41 files
