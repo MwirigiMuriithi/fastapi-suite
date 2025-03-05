@@ -1,6 +1,6 @@
 # app/services/task.py
 from sqlalchemy.orm import Session
-from app.db import crud
+import app.db.task_crud as crud
 from app.schemas.task import TaskCreate, TaskUpdate
 
 class TaskService:
