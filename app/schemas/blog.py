@@ -10,7 +10,9 @@ class BlogCreate(BlogBase):
 
 class Blog(BlogBase):
     id: int
-    created_at: str  # You can change this to a datetime object if needed.
+    created_at: str 
 
     class Config:
         orm_mode = True
+
+
