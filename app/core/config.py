@@ -1,9 +1,21 @@
-from pydantic import BaseSettings
+# from pydantic import BaseSettings
+
+# class Settings(BaseSettings):
+#     SECRET_KEY: str = "your-secret-key" 
+#     ALGORITHM: str = "HS256"
+#     DATABASE_URL: str = "sqlite:///./test.db" 
+    
+#     class Config:
+#         env_file = ".env"
+
+# settings = Settings()
+
+from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    SECRET_KEY: str = "your-secret-key"  # Change this in production
+    SECRET_KEY: str = "your-secret-key"
     ALGORITHM: str = "HS256"
-    DATABASE_URL: str = "sqlite:///./test.db"  # You can switch this to PostgreSQL or other DBs
+    DATABASE_URL: str = "sqlite:///./test.db"
     
     class Config:
         env_file = ".env"
