@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional
+from datetime import datetime
 
 class BlogBase(BaseModel):
     title: str
@@ -10,7 +11,7 @@ class BlogCreate(BlogBase):
 
 class Blog(BlogBase):
     id: int
-    created_at: str 
+    created_at: datetime
 
     class Config:
         orm_mode = True
